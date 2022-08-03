@@ -1,0 +1,191 @@
+<meta charset="utf-8">
+
+<br>
+<br>
+
+<h3>Ejercicios de string y concatenacion con JavaScript</h3>
+
+<br>
+
+
+<h4>La etiqueta "document" y "write" se utiliza para escribir codigo html dentro de JavaScrip</h4>
+
+
+<br>
+
+<!-- <script>
+	document.write("La edad de Cristian es... <br>");
+	document.write("25 <br>")
+
+	document.write("25" + 30 ) //ejemplo de concatenacion string + numero = string
+	document.write("<br>")
+	document.write("<br>")
+	document.write(5 + 30 ) //ejemplo de concatenacion numero + numero = operacion matematica
+	document.write("<br>")
+	document.write("20" +  "22") //ejemplo de concatenacion string + string = string
+	document.write("<br>")
+	document.write("<h4>Operaciones con textos y numeros</h4>")
+	document.write("<br><br>")
+	document.write("El año de nacimiento de Cristian es...")
+	document.write("<br>")
+	document.write(2022-25)
+	document.write("<br>")
+	document.write("<br>")
+	document.write("El promedio de edad de Critian, Josue y Carlos es...")
+	document.write("<br>")
+	document.write("El primedio de edad es:" + (20+25+15)/3) 
+	document.write("<br>")
+	document.write("<br>")
+	document.write("El año de nacimiento de Carlos es...")
+	document.write("<br>")
+	document.write(2022-15)
+</script> -->
+
+<h3>Utilizando variables</h3>
+
+
+<!-- Ejercicio usando variables -->
+
+<script>
+  var anho = 2022; //declaramos una variable
+
+  document.write("Juan tiene...");
+  document.write("<br>");
+  document.write((anho - 2000) + " años");
+  document.write("<br>");
+  document.write("<br>");
+  document.write("Pedro tiene...");
+  document.write("<br>");
+  document.write(anho - 2001);
+  document.write("<br>");
+  document.write("<br>");
+
+  anho = 2015 //reutilizamos la variable para asignarle otro valor
+
+  document.write("Carlos tiene...");
+  document.write("<br>");
+  document.write(anho - 1999);
+  document.write("<br>");
+  document.write("<br>");
+  document.write("<br>");
+  document.write("<br>");
+
+  //En las variables no solo podemos asignarle string sino que tambien podemos asignarle formulas matematicas y numeros
+
+  //Definir una formula matematica  sin  haberla definido en una variable, es una mala practica, por ello es mejor definirla dentro de una variable
+  document.write("<h4>Mas ejercicios utilizando variables</h4>")
+  document.write("<br>");
+
+  anho = 2020
+
+  document.write("Jimena tiene: " + (anho - 2010) + " años")
+  document.write("<br>")
+  document.write("<br>")
+
+  document.write("Paola tiene: " + (anho - 1995) + " años")
+  document.write("<br>")
+  document.write("<br>")
+
+
+  document.write("Laura tiene: " + (anho - 2005) + " años")
+  document.write("<br>")
+  document.write("<br>")
+
+  //Promediamos las edades de las mujeres 
+
+  //Promediar de mala practica
+
+  document.write("El promedio de la edad de las mujeres es: " + (10 + 25 + 15) / 3)   //Definir la formula de esta manera es una mala practica
+
+  //Promediar con buena practtica
+
+  var edadJimena = 10;
+  var edadPaola = 25;
+  var edadLaura = 15;
+
+  var nombre1 = "Jimena";
+  var nombre2 = "Paola";
+  var nombre3 = "Laura";
+
+  var promedio = (edadJimena + edadPaola + edadLaura) / 3;  //Definir la formula de esta manera es una BUENA practica
+  document.write("<br>")
+  document.write("<br>")
+
+
+  document.write("El promedio de la edad de " + nombre1 + ", " + nombre2 + " y " + nombre3 + " es: " + Math.round(promedio));
+  document.write("<br>")
+  document.write("<br>")
+  document.write("<br>")
+  document.write("<br>")
+
+  //Ejercicio de simplificar codigo con la tabla de multiplitcar 
+
+  document.write("<h4>Ejercicio de simplificar codigo con la tabla de multiplitcar</h4>")
+
+
+  document.write("Codigo con mala practica")
+  document.write("<br>")
+  document.write("<br>")
+
+  //ejercicio
+
+  document.write("5 por 1 es " + 5 * 1 + "<br>");
+  document.write("5 por 2 es " + 5 * 2 + "<br>");
+  document.write("5 por 3 es " + 5 * 3 + "<br>");
+  document.write("5 por 4 es " + 5 * 4 + "<br>");
+  document.write("5 por 5 es " + 5 * 5 + "<br>");
+  document.write("5 por 6 es " + 5 * 6 + "<br>");
+  document.write("5 por 7 es " + 5 * 7 + "<br>");
+  document.write("5 por 8 es " + 5 * 8 + "<br>");
+  document.write("5 por 9 es " + 5 * 9 + "<br>");
+  document.write("5 por 10 es " + 5 * 10 + "<br>");
+  document.write("<br>")
+  document.write("<br>")
+  document.write("<br>")
+
+  document.write("Codigo con BUENA practica")
+
+  document.write("<br>")
+  document.write("<br>")
+
+
+  //ejercicio  con codigo simplificado
+
+  let numeroTabla = 8;
+
+  document.write(numeroTabla + " x " + "1" + " = " + numeroTabla * 1 + "<br>");
+  document.write(numeroTabla + " x " + "2" + " = " + numeroTabla * 2 + "<br>");
+  document.write(numeroTabla + " x " + "3" + " = " + numeroTabla * 3 + "<br>");
+  document.write(numeroTabla + " x " + "4" + " = " + numeroTabla * 4 + "<br>");
+  document.write(numeroTabla + " x " + "5" + " = " + numeroTabla * 5 + "<br>");
+  document.write(numeroTabla + " x " + "6" + " = " + numeroTabla * 6 + "<br>");
+  document.write(numeroTabla + " x " + "7" + " = " + numeroTabla * 7 + "<br>");
+  document.write(numeroTabla + " x " + "8" + " = " + numeroTabla * 8 + "<br>");
+  document.write(numeroTabla + " x " + "9" + " = " + numeroTabla * 9 + "<br>");
+  document.write(numeroTabla + " x " + "10" + " = " + numeroTabla * 10 + "<br>");
+
+  //Ejercicio de variable mejorando el mantenimiento de código
+
+  document.write("<h3>Mejorando el mantenimiento de código</h3>")
+  document.write("Para realizar los saltos de linea lo que haciamos era utilizar este codigo por cada salto de linea que quisieramos: <br> document.write(br) <br><br> pero esto es una mala practica ya que estariamos abarcando muchas lineas de codigo. <br><br> La mejor practica es crear una variable y asignarle los saltos de lineas que querramos y asi poder utilizar la <br> variable cuando querramos saltos de lineas <br><br> Ejemplo codigo: <br><br>" + "<code>let saltoLinea = br </code> <br><br> document.write(saltoLinea) <br><br>")
+
+
+  let saltoLinea = "<br><br>" // Le asignamos a nuestra variable la cantidad de saltos de lineas que deseamos
+
+  document.write("Ejemplo practico salto de linea con variable:")
+  document.write(saltoLinea)
+
+  //Utilizamos la variable para utilizar saltos de linea
+  document.write("Juan tiene...");
+  document.write(saltoLinea);
+  document.write((anho - 2000) + " años");
+  document.write(saltoLinea);
+  document.write("Pedro tiene...");
+  document.write(saltoLinea);
+  document.write(anho - 2001);
+  document.write(saltoLinea);
+  document.write("Carlos tiene...");
+  document.write(saltoLinea);
+  document.write(anho - 1999);
+
+</script>

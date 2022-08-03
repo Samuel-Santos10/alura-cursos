@@ -1,0 +1,60 @@
+<meta charset="utf-8">
+
+<h1>Programa</h1>
+<h3>Funciones</h3>
+
+
+<script>
+  //funciones: Las funciones no es mas que codigo que recibe instrucciones y puede o no recibir parametros y nos devuelve un resultado  
+  //Las funciones tienen la caracteristica de iniciar con un parentesis
+  //Las funciones dentro de los parentesis recibe parametros
+
+
+  function mostrarAlerta(mensaje) {
+    alert("***" + mensaje + "***")
+  }
+
+
+  function saltarLinea() {
+
+    document.write("<br>")
+    document.write("<br>")
+    document.write("<br>")
+
+  }
+
+  //funcion con parametro
+
+  function imprimir(frase) {
+    document.write(frase);  //instruccion que imprima el parametro
+    saltarLinea();                  //Instruccion para que ejecute el salto de linea invocando la funcion
+  }
+
+  //Este codigo calcula las edades de jimena,paola y laura
+  let anho = 2020;
+
+  //enves de escribir  el codigo document.write para imprimir, podemos llamar la funcion imprimir y pasarle el parametro que queremos que imprima
+  imprimir("Jimena tiene: " + (anho - 2010) + " años")
+
+  imprimir("Paola tiene: " + (anho - 1995) + " años")
+
+  imprimir("Laura tiene: " + (anho - 2005) + " años")
+
+
+  //Ejercicio de crear funcion que muestre una alerta con el mensaje que queremos que muestre 
+  //total edades
+  //promedio edades
+
+  let edade1 = 10;
+  let edade2 = 20;
+  let edade3 = 30;
+
+  let totalEdades = edade1 + edade2 + edade3;
+  let promedioEdades = totalEdades / 3;
+
+  mostrarAlerta("Total de edades es: " + totalEdades);
+  mostrarAlerta("La media de las edades es: " + promedioEdades);
+
+
+
+</script>
