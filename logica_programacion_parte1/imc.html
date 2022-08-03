@@ -1,0 +1,67 @@
+<meta charset="utf-8">
+
+<h1>Programa calcular IMC</h1>
+
+<script>
+
+  function imprimir(frase) {
+    document.write(frase);
+    saltarLinea();
+  }
+
+  function saltarLinea() {
+    document.write("<br>")
+    document.write("<br>")
+    document.write("<hr>")
+  }
+
+  //creamos una funcion donde pondremos la formula de imc (ya que es la misma para cualquier persona que quiera calcular) para hacer mas eficiente nuestro codigo y reducir lineas de codigo
+  function calcularImc(peso, altura, nombre) {
+    imc = peso / (altura * altura);
+    imprimir("El imc de " + nombre + " es " + imc);  //codigo  de version 3
+    // return (imc); codigo  de version 2
+  }
+
+  //Este codigo calcula el indice de masa muscular(imc)
+
+
+  //este codigo Version1 es ineficiente ya que repetimos muchas lineas de codigo y necesitamos agregar mas variables al agregar otros usuarios
+  pesoCarlos = 78;
+  alturaCarlos = 1.63;
+  imcCarlos = pesoCarlos / (alturaCarlos * alturaCarlos);
+  imprimir("El IMC de Carlos es " + imcCarlos);
+
+
+  pesoFelipe = 68;
+  alturaFelipe = 1.73;
+  imcFelipe = pesoFelipe / (alturaFelipe * alturaFelipe);
+  imprimir("El IMC de Felipe es " + imcFelipe);
+
+
+  //este codigo Version2 es EFICIENTE
+  pesoCarlos = 58;
+  alturaCarlos = 1.63;
+  imcCarlos = calcularImc(pesoCarlos, alturaCarlos);   //le estamos diciendo que imcCarlos va a ser igual a la funcion calcularImc que estamos llamando y pasanodo los parametros de peso y altura
+  imprimir("El IMC de Carlos es " + imcCarlos);
+
+
+  pesoFelipe = 48;
+  alturaFelipe = 1.73;
+  imcFelipe = calcularImc(pesoFelipe, alturaFelipe);
+  imprimir("El IMC de Felipe es " + imcFelipe);
+
+
+  //este codigo Version3 es aun mas EFICIENTE que la version 2 y 3 de este codigo
+
+  calcularImc(58, 1.63, "Carlos");
+
+  calcularImc(48, 1.73, "Felipe");
+
+
+
+
+
+
+
+
+</script>

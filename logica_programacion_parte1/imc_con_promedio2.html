@@ -1,0 +1,33 @@
+<meta charset="utf-8">
+
+<h1>Programa calcular IMC con promedio 2</h1>
+
+
+<script>
+
+  //Es un error en las funciones y mala practica colocar muchas instrucciones dentro de una funcion, es mejor hacer las acciones por fuera de la funcion y que las funciones sean objetivas: calcular IMC, imprimir, realizar una acción a la vez.
+
+  // Entonces la buena práctica aprendida es crear funciones objetivas que realicen en máximo una sola acción, un solo cálculo y que nos retornen un valor y yo pueda reutilizar esa función en diferentes situaciones.
+
+  function imprimir(frase) {
+    document.write(frase);
+    saltarLinea();
+  }
+
+  function saltarLinea() {
+    document.write("<br>")
+    document.write("<br>")
+    document.write("<hr>")
+  }
+  //codigo ES AUN MAS  eficiente calcular imc y promedio
+
+  function calcularImc(peso, altura) {
+    return (peso / (altura * altura));
+  }
+
+  // let imcCristian = calcularImc(71, 1.72);
+  // let imcFelipe = calcularImc(75, 1.75);
+
+  imprimir("El promedio del IMC calculado de Cristian y Felipe es: " + (calcularImc(71, 1.72) + calcularImc(75, 1.75)) / 2);
+
+</script>

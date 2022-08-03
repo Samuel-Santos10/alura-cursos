@@ -1,0 +1,33 @@
+<meta charset="utf-8">
+
+<h1>Programa calcular IMC con promedio</h1>
+
+
+<script>
+
+  function imprimir(frase) {
+    document.write(frase);
+    saltarLinea();
+  }
+
+  function saltarLinea() {
+    document.write("<br>")
+    document.write("<br>")
+    document.write("<hr>")
+  }
+
+  //codigo aun MAS  eficiente calcular imc y promedio
+  //una funcion consiste en 3 partes: Entrada(parametros), proceso (operacion) y salida (return)
+
+  function calcularImc(peso, altura) {                                         //entrada
+    //metodo mas corto:               return (peso / (altura * altura))
+    imc = peso / (altura * altura);                                                              //Proceso
+    return imc;                                                                                         //Salida
+  }
+
+  let imcCristian = calcularImc(71, 1.72); //llamamos la funcion y le pasamos los parametros
+  let imcFelipe = calcularImc(75, 1.75);
+
+  imprimir("El promedio del imc calculado de Cristian y Felipe es: " + (imcCristian + imcFelipe) / 2);
+
+</script>

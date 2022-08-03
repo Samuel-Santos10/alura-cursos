@@ -1,0 +1,35 @@
+<meta charset="utf-8">
+
+<h1>Interactuando con el usuario utilizando la funcion predeterminada "prompt"</h1>
+<h3>Calculando imc</h3>
+
+<script>
+
+  function imprimir(frase) {
+    document.write(frase);
+    saltarLinea();
+  }
+
+  function saltarLinea() {
+    document.write("<br>")
+    document.write("<br>")
+    document.write("<hr>")
+  }
+  //codigo ES AUN MAS  eficiente calcular imc 
+
+  //Este codigo calcula el imc interactuando con el usuario
+  function calcularImc(peso, altura) {
+    return (peso / (altura * altura));
+  }
+
+  // Si queremos mostrar un pop - up, que muestre una pregunta y permita al usuario ingresar con un valor, hacemos uso de la función "prompt"
+
+  nombre = prompt("Informe su nombre")
+  pesoInformado = prompt(nombre + ", Informe su peso");
+  alturaInformada = prompt(nombre + ", Informe su altura");
+
+  imcCalculado = calcularImc(pesoInformado, alturaInformada);
+
+  imprimir(nombre + ", su imc calculado es " + imcCalculado);
+
+</script>
