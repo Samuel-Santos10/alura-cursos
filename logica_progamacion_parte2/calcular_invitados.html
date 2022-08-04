@@ -1,0 +1,32 @@
+<meta charset="utf-8">
+
+<h1>Programa - Calcular Total de invitados de una fiesta</h1>
+
+<h4>Nuestro amigo Jorge creó un programa simple para calcular el total de invitados de su fiesta, el programa tiene que
+  <br>
+  sumar el total de invitados normales con el total de invitados VIPs. Ciertamente podría usar la calculadora, pero le
+  <br>
+  pareció relevante ejercer su conocimiento para diseñar un programa
+</h4>
+
+<script>
+
+  function saltarLinea() {
+    document.write("<br>")
+    document.write("<br>")
+  }
+
+  function imprimir(mensaje) {
+    document.write(mensaje);
+    saltarLinea();
+  }
+
+  let invitados = parseInt(prompt("Ingrese el numero de invitados normales"));
+  let invitadosVip = parseInt(prompt("Ingrese el numero de invitados vip"));
+
+  let totalInvitados = invitados + invitadosVip;
+
+  imprimir("El total de invitados es " + totalInvitados);
+
+
+</script>

@@ -1,0 +1,37 @@
+<meta charset="utf-8">
+
+<h1>Programa - Calcular puntos de equipo de futbol (condicional if)</h1>
+
+
+<script>
+
+  function saltarLinea() {
+    document.write("<br>")
+    document.write("<br>")
+  }
+
+  function imprimir(mensaje) {
+    document.write(mensaje);
+    saltarLinea();
+  }
+
+  //Este codigo calcula el total de puntos obtenidos de un equipo de fultbol agregando condicional if
+
+  let victorias = parseInt(prompt("Ingrese la cantidad de victorias"));
+  let empates = parseInt(prompt("Ingrese la cantidad de empates"));
+  let totalPuntos = victorias * 3 + empates;
+
+  imprimir("el total de puntos obtenidos es " + totalPuntos);
+
+  if (totalPuntos > 28) {
+    imprimir("El equipo esta mejor que el año pasado")
+  }
+  if (totalPuntos < 28) {
+    imprimir("El equipo esta peor que el año pasado")
+  }
+  if (totalPuntos == 28) {           //doble igual (==) se utiliza para comparar dos valores
+    imprimir("El equipo esta igual que el año pasado")
+  }
+
+
+</script>

@@ -1,0 +1,39 @@
+<meta charset="UTF-8">
+
+
+<h1>PROGRAMA - CALCULAR LA MEDIA DE LAS EDADES DE UNA FAMILIA</h1>
+
+<h4>Aprendimos a acumular variables</h4>
+<p>Es decir, para solicitar la edades a 4 personas en vez de utilizar la funcion prompt 4 veces, es mejor utilizar una
+  variable con la funcion prompt, y esta la repita 4 veces con el ciclo while con una sola instruccion de funcion
+  prompt!</p>
+
+<h4>Variables fuera de un ciclo</h4>
+<p>Tambien aprendimos que las variables que utilicemos en un ciclo for o while, estas se tienen que declarar fuera del
+  ciclo, porque sino estas se reinician su valor a 0 en cada ejecucion.
+<p>
+
+  <script>
+    function saltarLinea() {
+      document.write("<br>")
+      document.write("<br>")
+    }
+    function imprimir(mensaje) {
+      document.write(mensaje);
+      saltarLinea();
+    }
+
+    let contador = 1;
+    let totalEdades = 0;
+    let miembrosFamilia = parseInt(prompt("Ingresa el numero de miembros de la familia"));
+
+    while (contador <= miembrosFamilia) {
+      edad = parseInt(prompt("Ingresa la edad del familiar"));
+      totalEdades = totalEdades + edad;
+      contador++;
+    }
+
+    imprimir("El promedio de las edades es " + totalEdades / miembrosFamilia);
+
+
+  </script>

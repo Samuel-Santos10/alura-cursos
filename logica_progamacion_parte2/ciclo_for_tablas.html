@@ -1,0 +1,40 @@
+<meta charset="utf'8">
+
+
+<h1>Programa - TABLA DE MULTIPLICAR CON CICLO "FOR" Y "WHILE"</h1>
+
+<h4>El ciclo for consta de 3 partes: for(contadorVariable;condicion;incrementador)</h4>
+
+<p>Algo que aprendimos es que existe otra forma incrementar un valor en ves de escribir: contador = contador +1; <br>
+  Podemos escribir: contador++; es lo mismo pero de forma resumida.
+</p>
+
+<script>
+  function saltarLinea() {
+    document.write("<br>");
+    document.write("<br>");
+  }
+
+  function imprimir(frase) {
+    document.write(frase);
+    saltarLinea();
+  }
+
+  //Este codigo calcula las tablas de multiplicar con el ciclo mientras (while) 
+  imprimir("while")
+  multiplicador = 1;
+  tablaAsignada = parseInt(prompt("Ingrese el numero de la tabla a multiplicar"));
+
+  while (multiplicador <= 10) {
+    imprimir(tablaAsignada + " x " + multiplicador + " = " + tablaAsignada * multiplicador);
+    multiplicador++;
+  }
+
+  //Este codigo calcula las tablas de multiplicar con el ciclo para (for) 
+  imprimir("for")
+  tablaAsignada = parseInt(prompt("Ingrese el numero de la tabla a multiplicar"));
+
+  for (let multiplicador = 1; multiplicador <= 10; multiplicador++) {
+    imprimir(tablaAsignada + " x " + multiplicador + " = " + tablaAsignada * multiplicador);
+  }
+</script>

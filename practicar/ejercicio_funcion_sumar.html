@@ -1,0 +1,30 @@
+<meta charset="utf-8">
+
+
+
+<script>
+
+  function saltarLinea() {
+    document.write("<br>")
+    document.write("<br>")
+  }
+  function imprimir(mensaje) {
+    document.write(mensaje);
+    saltarLinea();
+  }
+
+  function calcularSuma(valor1, valor2) {
+    suma = (valor1 + valor2);
+    return suma;
+  }
+
+  valor1Obtenido = parseInt(prompt("Ingrese el primer valor"));
+  valor2Obtenido = parseInt(prompt("Ingrese el segundo valor"));
+
+  sumaCalculada = calcularSuma(valor1Obtenido, valor2Obtenido);
+
+  imprimir("El resultado de la suma es " + sumaCalculada);
+
+
+
+</script>

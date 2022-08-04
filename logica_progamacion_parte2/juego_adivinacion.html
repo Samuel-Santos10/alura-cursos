@@ -1,0 +1,38 @@
+<meta charset="utf-8">
+
+
+<h1>Programa - Juego de adivinacion</h1>
+
+<h4>El operador "diferente de" en condicional if, es el signo de admiracion seguido de igual (!=)</h4>
+
+<h4>Tambien aprendimos una funcion de JS que esta dentro de "Math", la cual es "random" ejemplo: "Math.random" <br>
+  Esta funcion lo que nos da es un numero aleatorio cada vez que lo ejecutamos. <br><br>
+
+  Tambien otra funcion dentro de Math es la funcion "Math.round", el cual se utiliza para redondear un numero y que nos
+  de un numero entero.
+</h4>
+
+
+<script>
+
+  function saltarLinea() {
+    document.write("<br>")
+    document.write("<br>")
+  }
+
+  function imprimir(mensaje) {
+    document.write(mensaje);
+    saltarLinea();
+  }
+
+  let numeroAleatorio = Math.round(Math.random() * 10);
+  let numeroObtenido = parseInt(prompt("Escoja un numero entre 1-10"));
+
+  if (numeroObtenido == numeroAleatorio) {
+    imprimir("Acertaste");
+  }
+  else {    //utilizamos if y else cuando solo tenemos dos condiciones
+    imprimir("Haz errado, el numero aleatorio era " + numeroAleatorio);
+  }
+
+</script>

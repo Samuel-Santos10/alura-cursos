@@ -1,0 +1,35 @@
+<meta charset="utf-8">
+
+<h1>Programa - Calcular puntos de equipo de futbol</h1>
+
+<h3>Ademas en este programa convertimos el texto en numero, ya que la funcion "prompt" nos devuelte string y tenemos que
+  <br>
+  pasarlo a numero para poder realizar una operacion matematica.
+</h3>
+
+<h4>Para convertir un valor de texto a numerico, utilizamos la funcion "parseInt(valorAconvertir)"</h4>
+<br>
+
+
+<script>
+
+  function saltarLinea() {
+    document.write("<br>")
+    document.write("<br>")
+  }
+
+  function imprimir(mensaje) {
+    document.write(mensaje);
+    saltarLinea();
+  }
+
+  //Este codigo calcula el total de puntos obtenidos de un equipo de fultbol
+
+  let victorias = parseInt(prompt("Ingrese la cantidad de victorias"));
+  let empates = parseInt(prompt("Ingrese la cantidad de empates"));
+  let totalPuntos = victorias * 3 + empates;
+
+  imprimir("el total de puntos obtenidos es " + totalPuntos);
+
+
+</script>

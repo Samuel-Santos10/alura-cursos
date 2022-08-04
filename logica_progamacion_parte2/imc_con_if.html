@@ -1,0 +1,52 @@
+<meta charset="UTF-8">
+
+
+<!-- funciones  -->
+
+<h1>Mejorando programa IMC con condicional if</h1>
+
+
+
+<script>
+  function saltarLinea() {
+    document.write("<br>")
+    document.write("<br>")
+  }
+  function imprimir(mensaje) {
+    document.write(mensaje);
+    saltarLinea();
+  }
+  function calcularImc(peso, altura) {
+    return (peso / (altura * altura));
+  }
+
+
+  //este codigo calcula el imc y segun el resultado nos mostrara un mensaje utilizando la condicion if
+
+  nombre = prompt("Ingrese su nombre")
+  pesoObtenido = prompt(nombre + ", Ingrese su peso");
+  alturaObtenida = prompt(nombre + ", Ingrese su altura");
+
+  imcCalculado = calcularImc(pesoObtenido, alturaObtenida);
+
+  imprimir("El imc calculado es " + imcCalculado);
+
+  if (imcCalculado < 18.5) {
+    imprimir("El imc esta fuera de lo normal")
+  }
+  if (imcCalculado >= 18.5) {
+    if (imcCalculado < 25) {
+      imprimir("El imc esta en lo normal")
+    }
+  }
+  if (imcCalculado >= 25) {
+    if (imcCalculado < 30) {
+      imprimir("El imc esta en sobrepeso")
+    }
+  }
+  if (imcCalculado >= 30) {
+    imprimir("El imc esta en obesidad")
+  }
+
+
+</script>
