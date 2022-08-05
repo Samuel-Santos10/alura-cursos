@@ -1,0 +1,18 @@
+<meta charset="UTF-8">
+
+<input />
+<button>Mostrar texto escrito</button>
+
+<script>
+  var textoEscrito = document.querySelector("input");
+
+  function verifircar() {
+    alert("el texto escrito es " + textoEscrito.value);
+    textoEscrito.value = "";
+    textoEscrito.focus();
+  }
+
+  var button = document.querySelector("button");
+  button.onclick = verifircar;
+
+</script>

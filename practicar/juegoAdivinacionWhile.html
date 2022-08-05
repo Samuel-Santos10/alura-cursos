@@ -1,0 +1,45 @@
+<meta charset="UTF-8">
+
+
+<!-- programa de ejercicio de adivinacion de numero -->
+
+<script>
+
+  function saltarLinea() {
+    document.write("<br>")
+    document.write("<br>")
+  }
+
+  function imprimir(mensaje) {
+    document.write(mensaje);
+    saltarLinea();
+  }
+
+  let numeroAleatorio = Math.round(Math.random() * 10);
+  var intentos = 3;
+  var contador = 1;
+
+  while (contador <= intentos) {
+    var numeroObtenido = parseInt(prompt("Escoja un numero entre 1-10"));
+
+    if (numeroAleatorio == numeroObtenido) {
+      alert("Acertaste en el intento " + contador);
+      break;
+    }
+    else {
+      alert("Haz errado, intento " + contador);
+    }
+    contador++;
+  }         //final while
+
+  if (numeroAleatorio == numeroObtenido) {
+    imprimir("Acertaste en el intento " + contador + " el numero correcto era " + numeroAleatorio);
+  }
+  else {
+    imprimir("Haz errado,  el numero correcto era " + numeroAleatorio);
+  }
+
+  imprimir("FIN")
+
+
+</script>

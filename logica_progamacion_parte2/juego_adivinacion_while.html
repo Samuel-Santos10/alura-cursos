@@ -1,0 +1,64 @@
+<meta charset="utf-8">
+
+
+<h1>Programa - Juego de adivinacion con ciclo while</h1>
+
+<p>Este ejercicio consta de esblecer un numero de intentos que el usuario podra usar en lo que trata de adivinar el
+  numero. <br>
+  Si el usuario hacerta, le dira que acerto en el numero de intento que acerto. <br>
+  si falla los 3 intentos, al final le dira que fallo y aparecera el numero correcto que era.
+</p>
+
+<h4>Aprendimos que el ciclo while tiene un comando el cual es "break", en español significa "freno"</h4>
+
+<p>El comando <b>"break"</b> se utiliza para <b>finalizar un bucle</b> </p>
+
+
+<script>
+
+  function saltarLinea() {
+    document.write("<br>")
+    document.write("<br>")
+  }
+
+  function imprimir(mensaje) {
+    document.write(mensaje);
+    saltarLinea();
+  }
+
+  var numeroAleatorio = Math.round(Math.random() * 10);
+  var contador = 1;
+  var intentos = 3;
+
+
+  //codigo ciclo while
+
+  while (contador <= intentos) {
+
+    var numeroObtenido = parseInt(prompt("Escoja un numero entre 1-10"));
+
+    //codigo condicional if
+    if (numeroAleatorio == numeroObtenido) {
+      alert("Acertaste en el intento " + contador);
+      break; //salir del bucle
+    }
+
+    else {
+      alert("Usted erró " + "(intento " + contador + ")");
+    }
+
+    contador++;
+
+  } //final de while
+
+  if (numeroAleatorio == numeroObtenido) {
+    imprimir("Haz acertado en el intento " + contador + " el numero correcto era " + numeroAleatorio);
+  }
+
+  else {
+    imprimir("Haz errado, el numero correcto era " + numeroAleatorio);
+  }
+
+  imprimir("Final");
+
+</script>

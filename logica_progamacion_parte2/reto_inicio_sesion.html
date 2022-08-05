@@ -1,0 +1,71 @@
+<meta charset="UTF-8">
+
+<!-- PROBLEMA 
+  Es común que los programas tengan una pantalla de inicio de sesión, es decir, la pantalla que identifica al usuario en
+el sistema. Para permitir el acceso, el nombre de usuario y la contraseña deben coincidir con los valores almacenados
+por la aplicación, independientemente de dónde se guardó la información. Tampoco es raro permitir un máximo de tres
+intentos y después del tercero, el sistema se niega a identificar al usuario y notifica al administrador del sistema o
+incluso al propietario de la cuenta.
+
+ATENCIÓN, solo le da una oportunidad al usuario
+
+<script>
+
+  var inicioDeSesionRegistrado = "alura";
+  var contrasenhaRegistrada = "alura321";
+
+  var inicioDeSesionIngresado = prompt("Ingrese su usuario");
+  var contrasenhaIngresada = prompt("Ingrese su contraseña");
+
+  if (inicioDeSesionRegistrado == inicioDeSesionIngresado && contrasenhaRegistrada == contrasenhaIngresada) {
+    alert("Bienvenido al sistema " + inicioDeSesionIngresado);
+  } else {
+    alert("inicio de sesión inválido. Favor intente de nuevo");
+  }
+</script>
+
+Cambia el código anterior para que el usuario tenga 3 intentos de inicio de sesión. Atención: si lo hace bien en el primer intento, no tiene sentido seguir preguntando por su nombre de usuario y contraseña.-->
+
+<script>
+
+  function saltarLinea() {
+    document.write("<br>")
+    document.write("<br>")
+  }
+  function imprimir(mensaje) {
+    document.write(mensaje);
+    saltarLinea();
+  }
+
+  // Permitir 3 intentos, despues del tecero finalizar
+  // Si accede al primer intento finalizar
+
+  var inicioDeSesionRegistrado = "alura";
+  var contrasenhaRegistrada = "alura321";
+
+  var intentos = 3;
+  var contador = 1;
+
+  while (contador <= intentos) {
+
+    var inicioDeSesionIngresado = prompt("Ingrese su usuario");
+    var contrasenhaIngresada = prompt("Ingrese su contraseña");
+
+    if (inicioDeSesionRegistrado == inicioDeSesionIngresado && contrasenhaRegistrada == contrasenhaIngresada) {
+      alert("Bienvenido al sistema " + inicioDeSesionIngresado);
+      break;
+    } else {
+      alert("inicio de sesión inválido. Favor intente de nuevo");
+    }
+    contador++;
+  }
+
+  if (inicioDeSesionRegistrado == inicioDeSesionIngresado && contrasenhaRegistrada == contrasenhaIngresada) {
+    imprimir("Bienvenido al sistema " + inicioDeSesionIngresado);
+  } else {
+    imprimir("Inicio de sesión inválido. Contactese con el administrador del sistema");
+  }
+
+  imprimir("FIN");
+
+</script>

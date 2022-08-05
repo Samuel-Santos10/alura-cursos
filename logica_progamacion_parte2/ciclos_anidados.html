@@ -1,0 +1,25 @@
+<meta charset="utf-8">
+
+<h1>Programa - Imprimiendo hasterisco con ciclos anidados (un ciclo dentro de otro ciclo)</h1>
+
+<script>
+
+  function saltarLinea() {
+    document.write("<br>")
+  }
+  function imprimir(mensaje) {
+    document.write(mensaje);
+    saltarLinea();
+  }
+
+  var lineas = 3;
+
+  for (let contador = 1; contador <= lineas; contador++) {  // en este ciclo realizara 3 lineas
+
+    for (let columnas = 1; columnas <= 10; columnas++) { //  en este ciclo Imprimira 10 hasterizcos (*) en 10 columnas, un * por cada columna.
+      document.write("*");
+    }
+    saltarLinea();
+  }
+
+</script>

@@ -1,0 +1,30 @@
+<meta charset="utf'8">
+
+<h1>PROGRAMA - NUMEROS PARES DEL 1 AL 100</h1>
+
+<!-- PROBLEMA:
+Usando la instrucción while, imprime todos los números pares del 1 al 100 y al final imprime la palabra "FIN". -->
+
+<script>
+
+  function saltarLinea() {
+    document.write("<br>");
+    document.write("<br>");
+  }
+
+  function imprimir(frase) {
+    document.write(frase);
+    saltarLinea();
+  }
+
+  let contador = 0;
+  let limiteNumero = parseInt(prompt("Ingresa el numero limite a calcular numero par"));
+
+  imprimir("Numeros pares");
+
+  while (contador < limiteNumero) {
+    imprimir(contador += 2)  // contador = contador + 2 es lo mismo que contador += 2 pero de forma mas corta
+  }
+  imprimir("FIN");
+
+</script>
